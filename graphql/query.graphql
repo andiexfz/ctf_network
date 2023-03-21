@@ -1,0 +1,35 @@
+query Jafarzar {
+  allHeaders {
+    id
+    url
+    styleTw
+  }
+  hero {
+    id
+    heroImg {
+      url
+    }
+  }
+  allSkillIcons(orderBy: _createdAt_DESC) {
+    id
+    icon
+    styleTw
+  }
+  allProjectLists(orderBy: _createdAt_DESC) {
+    id
+    preview {
+      url
+    }
+    projectName
+    repository
+    website
+    description
+  }
+  about {
+    id
+    aboutImg {
+      url
+    }
+    aboutText
+  }
+}
