@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Share:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::-webkit-scrollbar {
+    @apply xl:w-4;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-purple-800 rounded-md bg-clip-padding border-x-2 border-solid border-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-purple-900;
+  }
+
+  h3,
+  p {
+    @apply text-sm md:text-lg xl:text-xl;
+  }
+}
+
+@layer components {
+  .badan {
+    @apply flex flex-col relative h-screen items-center text-center gap-[8vh] 2xl:gap-32 pt-20 max-w-4xl px-5 mx-auto;
+  }
+  .konten {
+    @apply flex flex-col md:flex-row gap-2 md:gap-10 items-center justify-center text-center;
+  }
+
+  .sectionTitle {
+    @apply tracking-widest text-white font-semibold text-2xl bg-purple-800 py-1 px-12 border-2 border-black;
+  }
+
+  /* HEADER */
+  .headerButton {
+    @apply bg-purple-800 rounded-full cursor-pointer border-2 border-black;
+  }
+
+  /* HERO */
+  .heroButton {
+    @apply px-4 py-1 rounded-lg text-sm tracking-widest font-semibold text-white bg-purple-800 hover:bg-purple-900 border-2 border-black;
+  }
+
+  /* ABOUT */
+  .aboutImg {
+    @apply relative overflow-hidden h-72 w-56 md:w-[350px] md:h-[500px] lg:w-[400px] m-0 flex-shrink-0 object-cover rounded-xl md:rounded-[50px] border-4 border-black;
+  }
+  .aboutImgScale {
+    @apply absolute w-full h-full transition-all duration-500 ease-in-out transform object-cover hover:scale-110;
+  }
+
+  /* SKILL */
+  .iconBorder {
+    @apply bg-transparent border-2 border-black rounded-full w-12 h-12 md:w-16 md:h-16 flex justify-center items-center hover:cursor-grab active:cursor-grabbing bg-purple-800 hover:bg-purple-900;
+  }
+  .icons {
+    @apply w-8 h-8 md:w-10 md:h-10 rounded-md;
+  }
+
+  /* PROJECT */
+  .modalButton {
+    @apply text-sm md:text-base text-white font-semibold bg-purple-800 hover:bg-purple-900 rounded-md py-1 px-4 border-2 border-black;
+  }
+  .projDiv {
+    @apply flex flex-col justify-center text-center items-center gap-4;
+  }
+  .projKonten {
+    @apply grid grid-cols-2 md:grid-cols-3 gap-12 items-start px-10;
+  }
+  .projImg {
+    @apply w-20 h-20 md:w-36 md:h-36 rounded-xl border-4 border-black shadow-md shadow-gray-800/60 cursor-pointer object-cover;
+  }
+}
